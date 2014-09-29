@@ -12010,6 +12010,7 @@ fi
 
 
 
+AM_PROG_AR
 
 # Check whether --enable-all-static was given.
 if test "${enable_all_static+set}" = set; then
@@ -12022,6 +12023,7 @@ if test "${enable_all_static+set}" = set; then
         fi
 else
   CCLD='$(CC)'
+
 fi
 
 
@@ -12048,13 +12050,12 @@ _ACEOF
 # Ultrix sh set writes to stderr and can't be redirected directly,
 # and sets the high bit in the cache file unless we assign to the vars.
 (
-  for ac_var in `(set) 2>&1 | sed -n 's/^\(a-zA-Z_a-zA-Z0-9_*\)=.*/\1/p'`; do
+  for ac_var in `(set) 2>&1 | sed -n 's/^\([a-zA-Z_][a-zA-Z0-9_]*\)=.*/\1/p'`; do
     eval ac_val=\$$ac_var
     case $ac_val in #(
     *${as_nl}*)
       case $ac_var in #(
-      *_cv_*
- { $as_echo "$as_me:$LINENO: WARNING: cache variable $ac_var contains a newline" >&5
+      *_cv_*) { $as_echo "$as_me:$LINENO: WARNING: cache variable $ac_var contains a newline" >&5
 $as_echo "$as_me: WARNING: cache variable $ac_var contains a newline" >&2;} ;;
       esac
       case $ac_var in #(

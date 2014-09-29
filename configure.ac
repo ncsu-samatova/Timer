@@ -14,6 +14,7 @@ LT_INIT
 AC_PROG_CC
 AM_PROG_CC_C_O
 m4_pattern_allow([AM_PROG_AR],[AM_PROG_AR])
+AM_PROG_AR
 
 AC_ARG_ENABLE(all-static,
         [AS_HELP_STRING([--enable-all-static],[add '-all-static' during libtool linking to force all static libraries and linking (default: no)])],
@@ -22,7 +23,7 @@ AC_ARG_ENABLE(all-static,
 	else
 	AC_SUBST([CCLD],['$(CC)'])
         fi],
-	[AC_SUBST([CCLD],['$(CC)']])
+	[AC_SUBST([CCLD],['$(CC)'])])
 
 
 AC_OUTPUT
