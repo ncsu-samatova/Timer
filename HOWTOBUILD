@@ -1,0 +1,6 @@
+Timer package doesn't depend on any other pacakge, so building Timer is easy.
+It requires three steps after you change directory to the Timer folder 
+
+1. ./configure --prefix=[path to the installation]
+2. make 
+3. make install
